@@ -1,36 +1,42 @@
-
-name: Build and Deploy Jekyll
+name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      # Step 2: Set up Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
-          bundler-cache: true
-      - name: Disable frozen Bundler
+          ruby-version: 3.3.5
+          bundler-cache: true  # optional: caches gems between runs
+
+      # Step 3: Disable frozen mode so Gemfile.lock can update
+      - name: Disable Bundler frozen mode
         run: bundle config set frozen false
 
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: bundle install --jobs 4
-        
-      - name: Install dependencies
-        run: bundle install
 
+      # Step 5: Build the Jekyll site
       - name: Build Jekyll site
-        run: bundle exec jekyll build --trace --verbose
+        run: bundle exec jekyll build
 
+      # Optional Step 6: Deploy (if using GitHub Pages)
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./_site
