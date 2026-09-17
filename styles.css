@@ -1,0 +1,485 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(254, 255, 255);
+  font-family: inter;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 10%;
+}
+
+/* Header */
+#header, nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 60px;
+  transition: color 0.12s, transform 0.12s;
+}
+
+nav .active {
+  color: #3FA2F6;
+}
+
+.nav-item:hover {
+  color: #3FA2F6;
+}
+
+.nav-item:active {
+  transform: scale(1.1);
+}
+
+/* logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Hero-section */
+#hero {
+  display: flex;
+  flex-direction: row;
+}
+/* Left */
+.hero-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 150px;
+  z-index: 1;
+  padding-right: 14vw;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction:column;
+  align-items: right;
+  padding-top: 200px;
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 25px 0;
+}
+
+h2 {
+  font-size: 8rem;
+  font-weight: 800;
+  color: white;
+   background: linear-gradient(135deg, #ffffff 30%, #ffffff 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.7));
+      -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #000000;
+  padding-bottom: 40px;
+ 
+}
+h4 {
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: #060606;
+   padding-bottom: 20px;
+}
+#researchpage {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #070707;
+  padding-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(49, 49, 49);
+  line-height: 1.5;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.linkblue {
+  color: #3FA2F6;
+}
+.linkblue:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding-top: 6%;
+  display: flex; 
+  flex-direction: column; 
+  height: 50%; 
+  color: white;   
+}
+
+.top-container {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around; 
+  align-items: center; 
+  height: 50%; 
+  gap: 10px; 
+}
+.top-container {
+  padding-top: 6%;
+  padding-bottom: 15%;
+
+}
+
+.top-item { 
+  display: flex; 
+  height: 100%; 
+  gap: 2px;
+  align-items: flex-start; 
+  justify-content: center; 
+  flex: 1; 
+}
+
+.row {
+display: flex;
+flex-direction: row;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem; /* Spacing between the columns and rows */
+  padding-bottom: 5rem;
+}
+
+/* Base styles for individual squares */
+.grid-item {
+  color: #ffffff;
+  padding: 3rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+
+  #brand {
+      font-family: 'Reservoir', sans-serif;
+      display: flex;
+      font-size: 2vw;
+      font-weight: 200;
+      letter-spacing: -1.5px;
+      background: linear-gradient(135deg, #ffffff 30%, #a6afb8 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.7));
+      -webkit-font-smoothing: antialiased;
+}
+      */
+ 
+ /* Base page styling */
+body {
+  font-family: sans-serif;
+}
+
+
+.open-btn
+  {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Reservoir', sans-serif;
+    display: flex;
+    font-size: 2vw;
+    font-weight: 200;
+    letter-spacing: -1.5px;
+    background: linear-gradient(135deg, #ffffff 30%, #a6afb8 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.7));
+    -webkit-font-smoothing: antialiased;
+  }
+/* Show class to trigger display via JavaScript */
+.popup-overlay.active {
+  display: block;
+}
+     
+/* button */
+.cta button {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 0;
+  width: 200px;
+  border:none;
+  border-radius: 8px;
+  margin-right: 50px;
+  background-color: #3FA2F6;
+  margin-bottom: 180px;
+  transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
+}
+
+.cta .cta-1:hover {
+  background-color: transparent;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 13px 0;
+}
+
+.cta .cta-2:hover {
+  background-color: #3fa1f6;
+  color: #000000;
+}
+
+.cta .cta-2 {
+  background-color: transparent;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 13px 0;
+}
+.open-btn:hover {
+  background-color: transparent;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 13px 0;
+}
+/* Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.social-icon{
+  padding-bottom: 50px;
+}
+
+.social-icon i {
+font-size: 1.2rem;
+color: #3FA2F6;
+border: 1px solid #3FA2F6;
+border-radius: 50px;
+padding: 8px;
+height: 25px;
+width: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.12s, box-shadow 0.12s;
+cursor: pointer;
+
+}
+
+.social-icon i:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #3FA2F6;
+}
+
+/* Right section */
+
+.hero-right {
+  transition: background-color 3s, box-shadow 3s;
+}
+.hero-right:hover {
+  background-color: rgba(6, 7, 12, 0.705);
+  box-shadow: 
+    0 0 20px rgb(6, 7, 12),
+    0 0 50px rgb(6, 7, 12),
+    0 0 100px rgb(6, 7, 12),
+    0 0 200px rgb(6, 7, 12);
+}
+
+img {
+  border-radius: 40%;
+  width: 160%;
+  height: auto;
+  background-size: cover;
+}
+
+#researchimg1 {
+  display: flex;
+  border-radius: 10%;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+.image2 {
+  width: 100%;
+  border-radius: 0%;
+
+}
+
+#image3 {
+  background-image: url('DJ-Phone-Still.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  height: 60vh;
+  border-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  left: 50%;
+  right: 50%;
+  margin-left: -15%;
+  margin-right: -15%;
+  
+}
+
+#image5 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0%;
+  width: 30%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 3rem;
+  
+  
+}
+.caption {
+  padding-top: 10px;
+  display: flex;
+  font-size: 0.8rem;
+  color: #000000;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 400px;
+  
+}
+
+.image4 {
+  width: 40vw;
+  height: 40vh;
+  border-radius: 0%;
+  padding-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundZoom {
+  from{
+    background-size: 80%;
+  }
+  to{
+    background-size: 100%;
+  }
+}
+
+
+
+
+/* Apply Animations */
+h1 {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+h3 {
+  animation: fadeIn 1.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+h4 {
+  animation: fadeIn 1.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+li {
+  animation: fadeIn 1.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+p {
+  animation: fadeIn 1.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+button {
+  animation: fadeIn 1.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.social-icon {
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.nav-item,
+.left-section {
+  animation: fadeInTop 1s ease-in forwards;
+  opacity: 0;
+}
+
+body {
+  animation: backgroundZoom 3s ease-in forwards;
+}
+  .caption {
+    animation: fadeIn 3s ease-out forwards;
+    opacity: 0;
+}
+img {
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: .2s;
+}
+
+/*Spacing*/
+ul {
+  font-size: larger;
+  list-style-type:circle;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  line-height: 2;
+}
