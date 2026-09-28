@@ -47,7 +47,6 @@ display: flex;
 }
 
 .nav-list {
-
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -70,8 +69,8 @@ display: flex;
   .header-content {
     flex-direction: column;
     align-items: center;
-    padding: 25px 0;
-    row-gap: 18px;
+    padding: 20px 0;
+    row-gap: 10px;
   }
 
   .nav-list {
@@ -101,7 +100,8 @@ display: flex;
   .hero-left {
     text-align: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    align-items: left;
     padding: 2rem;
   }
   .hero-right {
@@ -150,6 +150,13 @@ h2 {
       -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 800px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
+
 h3 {
   font-size: 2.3rem;
   font-weight: 800;
@@ -164,10 +171,14 @@ h4 {
    padding-bottom: 20px;
 }
 .researchpage {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #070707;
+  font-size: 4rem;
+  color: rgb(196, 195, 195);
   padding-bottom: 15px;
+  background: linear-gradient(135deg, #ffffff 30%, #ffffff 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.7));
+    -webkit-font-smoothing: antialiased;
 }
 
 p {
@@ -259,11 +270,30 @@ display: flex;
 flex-direction: row;
 gap: 30px;
 text-align: justify;
-padding: 2rem
+padding: 2rem;
+transition: background-color 2s ease;
 }
 
 @media (max-width: 800px) {
   .row {
+    flex-direction: column;
+    padding: 2rem;
+    gap:0px;
+    align-items: center;
+  }
+}
+
+.row-x {
+display: flex;
+flex-direction: row;
+text-align: justify;
+padding: 2rem;
+gap: 50px; 
+transition: background-color 2s ease;
+}
+
+@media (max-width: 800px) {
+  .row-x {
     flex-direction: column;
     padding: 2rem;
     gap:0px;
@@ -318,6 +348,35 @@ padding-inline-start: .5rem;
 
 @media (max-width: 800px) {
   .row-child20 {
+    width: 100%;
+    padding: 0;
+  }
+}
+.row-child30 {
+display: flex;
+width: 50%;
+padding: .5rem;
+justify-content: end;
+align-items:center;
+}
+
+@media (max-width: 800px) {
+  .row-child30 {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.row-child40 {
+display: flex;
+width: 50%;
+padding: .5rem;
+justify-content: start;
+align-items:center;
+}
+
+@media (max-width: 800px) {
+  .row-child30 {
     width: 100%;
     padding: 0;
   }
@@ -424,6 +483,7 @@ body {
   background-color: #3FA2F6;
   margin-bottom: 180px;
   transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
+
 }
 
 .cta .cta-1:hover {
@@ -453,20 +513,20 @@ body {
 /* Icons */
 .social-icon {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 25px;
 }
 
 .social-icon{
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .social-icon i {
 font-size: 1.2rem;
 color: #3FA2F6;
 border: 1px solid #3FA2F6;
-border-radius: 50px;
-padding: 8px;
+border-radius: 30px;
+padding: 15px;
 height: 25px;
 width: 25px;
 display: flex;
@@ -516,7 +576,7 @@ img {
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
-  width: 100vw;
+  width: 102vw;
   height: 60vh;
   border-radius: 0%;
   display: flex;
@@ -527,7 +587,7 @@ img {
   left: 50%;
   right: 50%;
   margin-left: -15%;
-  margin-right: 5%;
+  margin-right: -15%;
 
 }
 
@@ -542,8 +602,51 @@ img {
   text-align: center;
   justify-content: center;
   padding: 3rem;
-  
-  
+
+}
+
+#image6 {
+  background-image: url('researchimg1.JPG');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  width: 102vw;
+  height: 45vh;
+  border-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  left: 50%;
+  right: 50%;
+  margin-left: -15%;
+  margin-right: -15%;
+
+}
+
+#image7 {
+  background-image: url('DJ-truck-still.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  width: 102vw;
+  height: 45vh;
+  border-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  left: 50%;
+  right: 50%;
+  margin-left: -15%;
+  margin-right: -15%;
+
 }
 .caption {
   padding-top: 10px;
@@ -574,7 +677,7 @@ img {
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
-  width: 100vw;
+  width: 102vw;
   border-radius: 0%;
   display: flex;
   align-items: center;
@@ -624,7 +727,7 @@ html {
 
 
 /* Apply Animations */
-h1 {
+h1{
   animation: fadeIn 1.2s ease-out forwards;
   opacity: 0;
   animation-delay: 0.2s;
