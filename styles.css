@@ -222,6 +222,13 @@ p {
   border: none;
 }
 
+@media (max-width: 800px) {
+  .responsive-video {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .responsive-video1 {
   width: 100%;
   aspect-ratio: 16 / 9;
