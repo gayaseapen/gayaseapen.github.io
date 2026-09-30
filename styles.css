@@ -418,7 +418,11 @@ height: auto;
     padding: 0;
   }
 }
-
+@media (min-width: 1500px) {
+  .column {
+    padding: 0 15rem 0 15rem;
+  }
+}
 .teaching-course {
   padding: 0 12rem 0 12rem;
 }
